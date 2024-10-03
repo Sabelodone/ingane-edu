@@ -1,0 +1,68 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Use a friendly font */
+  background-color: #f0f8ff; /* Light blue background */
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Center content vertically */
+}
+
+.App-header {
+  background-color: #ffcc00; /* Bright yellow header */
+  padding: 20px;
+  border-bottom: 5px solid #ff6600; /* Dark orange border */
+}
+
+.App-title {
+  color: #ff3366; /* Bright pink title */
+  font-size: 2.5em; /* Larger font for title */
+  margin: 0;
+  animation: bounce 2s infinite; /* Animation for a playful feel */
+}
+
+h2 {
+  text-decoration: none; /* Remove underline */
+}
+
+/* Global text decoration reset */
+* {
+  text-decoration: none; /* Remove all text decorations */
+}
+
+/* Animation for the title */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-20px);
+  }
+  60% {
+      transform: translateY(-10px);
+  }
+}
+
+.App-footer {
+  background-color: #ffcc00; /* Same color as header */
+  padding: 10px;
+  border-top: 5px solid #ff6600; /* Dark orange border */
+  color: #333; /* Dark text for footer */
+}
+
+/* Link styles */
+a {
+  color: #ff3366; /* Link color */
+  text-decoration: none; /* No underline */
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}

@@ -1,0 +1,54 @@
+ /* FeaturesPage.css */
+
+/* Page Background and Font */
+.features-page {
+  background-color: #fce4ec; /* Light pink background */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font for kids */
+  padding: 40px;
+  text-align: center; /* Center align text */
+}
+
+/* Page Heading Styles */
+.features-page h1 {
+  font-size: 36px; /* Large heading */
+  color: #d81b60; /* Dark pink color for the title */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Features List Styles */
+.features-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap */
+  justify-content: center; /* Center align the cards */
+  gap: 20px; /* Space between cards */
+}
+
+/* Feature Card Styles */
+.feature-card {
+  background-color: #fff; /* White background for cards */
+  border: 2px solid #ff6f00; /* Orange border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the cards */
+  width: 200px; /* Fixed width for cards */
+  text-align: center; /* Center text inside cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.2s; /* Animation effect */
+}
+
+/* Feature Card Hover Effect */
+.feature-card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Feature Card Heading Styles */
+.feature-card h3 {
+  color: #e65100; /* Darker orange for card headings */
+  font-size: 24px; /* Size for headings */
+  margin-bottom: 10px; /* Space below headings */
+}
+
+/* Feature Card Paragraph Styles */
+.feature-card p {
+  color: #666; /* Dark grey for card text */
+  font-size: 16px; /* Size for paragraph */
+}

@@ -1,0 +1,52 @@
+.learn-more-page {
+    padding: 40px; /* Increased padding for a more spacious feel */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Use a playful font */
+    background-color: #fff; /* Bright white background */
+    border-radius: 10px; /* Rounded corners for a friendly look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 800px; /* Max width for better readability */
+    margin: auto; /* Centering the content */
+  }
+  
+  .learn-more-page h1 {
+    color: #FF6347; /* Tomato color for attention */
+    font-size: 36px; /* Larger font for the main title */
+    text-align: center; /* Center align the title */
+    margin-bottom: 20px; /* Space below the title */
+  }
+  
+  .learn-more-page h2 {
+    color: #5a3e91; /* Purple color for subheadings */
+    margin-top: 30px; /* Space above subheadings */
+    font-size: 28px; /* Slightly larger font size for subheadings */
+    border-bottom: 2px solid #FF6347; /* Underline for emphasis */
+    padding-bottom: 10px; /* Space below the border */
+  }
+  
+  .learn-more-page p {
+    color: #333; /* Dark gray for text */
+    line-height: 1.6; /* Increase line height for readability */
+    margin-bottom: 20px; /* Space below paragraphs */
+    font-size: 18px; /* Slightly larger font size */
+  }
+  
+  /* Add playful button styles */
+  .learn-more-button {
+    background-color: #5a3e91; /* Purple background */
+    color: #fff; /* White text */
+    padding: 12px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor for button */
+    font-size: 20px; /* Larger font size */
+    transition: background-color 0.3s; /* Smooth transition */
+    display: inline-block; /* Inline-block for spacing */
+    text-align: center; /* Center align button text */
+    margin: 20px auto; /* Center button with margin */
+  }
+  
+  /* Button hover effect */
+  .learn-more-button:hover {
+    background-color: #FF6347; /* Change background on hover */
+  }
+  

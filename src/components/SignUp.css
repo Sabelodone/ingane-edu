@@ -1,0 +1,79 @@
+/* SignUp.css */
+
+/* Container Styles */
+.container {
+    background-color: #fff9e6; /* Soft off-white background */
+    padding: 40px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+}
+
+/* Heading Styles */
+h2 {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+    color: #ff5722; /* Bright orange color */
+    text-align: center; /* Center align */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px; /* Space between form fields */
+}
+
+/* Input and Button Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 15px; /* Padding inside the input */
+    border: 2px solid #2196f3; /* Blue border */
+    border-radius: 8px; /* Slightly more rounded corners */
+    font-size: 16px; /* Font size for inputs */
+}
+
+/* Button Styles */
+button {
+    background-color: #4caf50; /* Green button */
+    color: white; /* White text */
+    font-size: 18px; /* Font size */
+    padding: 12px; /* Padding */
+    border: none; /* No border */
+    border-radius: 8px; /* Slightly more rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+/* Link Styles */
+.signin-link {
+    text-align: center; /* Center align */
+    margin-top: 15px; /* Space above links */
+}
+
+a {
+    color: #2196f3; /* Blue links */
+    text-decoration: underline; /* Underline links */
+}
+
+a:hover {
+    color: #1976d2; /* Darker blue on hover */
+}
+
+/* Error and Success Message Styles */
+.text-danger {
+    color: #f44336; /* Red for error messages */
+    text-align: center; /* Center align error messages */
+}
+
+.text-success {
+    color: #4caf50; /* Green for success messages */
+    text-align: center; /* Center align success messages */
+}
+
+  

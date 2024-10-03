@@ -1,0 +1,170 @@
+/* Body Styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2196f3;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: relative;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background: linear-gradient(90deg, #4fc3f7, #ff6699); /* Gradient background */
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+.hero-small-image {
+    max-width: 40%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Playful Button Styles */
+.bounce {
+    display: inline-block;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffcc00;
+    color: #d32f2f;
+    border-radius: 25px;
+    transition: transform 0.2s, background-color 0.2s;
+    font-size: 18px;
+    border: 2px solid #d32f2f;
+}
+
+.bounce:hover {
+    transform: scale(1.1);
+    background-color: #ffdd57;
+}
+
+/* Popup Styles */
+.feature-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feature-balloon {
+    background: #ffcc00;
+    border: 2px solid #2196f3;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.feature-balloon:hover {
+    transform: scale(1.05);
+}
+
+/* Features Section Styles */
+.features-section {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #e3f2fd, #ffcc00); /* Gradient background for features */
+}
+
+.features-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Feature Card Styles */
+.feature-card {
+    background-color: #ffcc00;
+    border: 2px solid #2196f3;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0; /* More space between cards */
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .feature-card {
+        margin: 20px 0; /* Consistent spacing for smaller screens */
+    }
+}
+
+/* Close Button (if needed) */
+.popup-content:after {
+    content: '✖';
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+/* Add additional styles as necessary */

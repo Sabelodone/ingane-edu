@@ -1,0 +1,123 @@
+/* Container Styles */
+.container {
+    background-color: #fff9e6; /* Soft off-white background */
+    padding: 40px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+    max-width: 400px; /* Limit container width */
+    margin: 0 auto; /* Center the container */
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Heading Styles */
+h2 {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+    color: #ff5722; /* Bright orange color */
+    text-align: center; /* Center align */
+    margin-bottom: 25px; /* Space below the heading */
+    font-size: 28px; /* Larger font size */
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+h2:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px; /* Space between form groups */
+}
+
+/* Label and Input Wrapper Styles */
+.input-group {
+    display: flex; /* Align label and input side by side */
+    justify-content: space-between; /* Space between label and input */
+    align-items: center; /* Center align vertically */
+}
+
+/* Label Styles */
+label {
+    flex: 1; /* Take up equal space */
+    margin-right: 10px; /* Space between label and input */
+    font-size: 16px; /* Font size for labels */
+}
+
+/* Input and Button Styles */
+input[type="email"],
+input[type="password"],
+input[type="text"] { /* Include text input here */
+    padding: 15px; /* Padding inside the input */
+    border: 2px solid #2196f3; /* Blue border */
+    border-radius: 8px; /* Slightly more rounded corners */
+    font-size: 16px; /* Font size for inputs */
+    transition: border-color 0.3s, transform 0.2s; /* Smooth border color transition */
+    flex: 2; /* Take up remaining space */
+}
+
+/* Input Focus Effect */
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+    border-color: #4caf50; /* Green border on focus */
+    outline: none; /* Remove default outline */
+    transform: scale(1.02); /* Slightly enlarge on focus */
+}
+
+/* Button Styles */
+button {
+    background-color: #4caf50; /* Green button */
+    color: white; /* White text */
+    font-size: 18px; /* Font size */
+    padding: 12px; /* Padding */
+    border: none; /* No border */
+    border-radius: 8px; /* Slightly more rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Link Styles */
+.forgot-password-link,
+.signin-link {
+    text-align: center; /* Center align */
+    margin-top: 15px; /* Space above links */
+    font-size: 14px; /* Font size for links */
+}
+
+a {
+    color: #2196f3; /* Blue links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+a:hover {
+    color: #1976d2; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Error Message Styles */
+.text-danger {
+    color: #f44336; /* Red for error messages */
+    text-align: center; /* Center align error messages */
+    font-weight: bold; /* Bold error messages */
+    margin-top: 10px; /* Space above error messages */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slide down effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
