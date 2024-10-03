@@ -1,113 +1,134 @@
+/* SignIn.css */
+
 /* Container Styles */
-.container {
+.signin-container {
     background-color: #fff9e6; /* Soft off-white background */
     padding: 40px;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
-    max-width: 400px; /* Limit container width */
-    margin: 0 auto; /* Center the container */
-    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: relative; /* Position relative for shapes */
 }
 
-/* Heading Styles */
-h2 {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
-    color: #ff5722; /* Bright orange color */
-    text-align: center; /* Center align */
-    margin-bottom: 25px; /* Space below the heading */
-    font-size: 28px; /* Larger font size */
-    transition: transform 0.3s; /* Add transition for hover effect */
+/* Title Styles */
+.signin-title {
+    text-align: center;
+    color: #6f1d99; /* Purple color for titles */
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+    font-size: 2.5em; /* Larger title */
 }
 
-h2:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+/* Shapes Container */
+.shapes-container {
+    position: absolute; /* Absolute positioning */
+    top: -50px; /* Position above the container */
+    right: -50px; /* Position right */
+    z-index: -1; /* Behind the container */
 }
 
-/* Form Styles */
-form {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    gap: 20px; /* Space between form groups */
+/* Shape Styles */
+.shape {
+    position: absolute;
 }
 
-/* Label and Input Wrapper Styles */
-.input-group {
-    display: flex; /* Align label and input side by side */
-    justify-content: space-between; /* Space between label and input */
-    align-items: center; /* Center align vertically */
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #ffb733; /* Light orange */
+    border-radius: 50%; /* Circle shape */
+    top: 20px; /* Position in the shapes container */
+    left: 10px; /* Position in the shapes container */
 }
 
-/* Label Styles */
-label {
-    flex: 1; /* Take up equal space */
-    margin-right: 10px; /* Space between label and input */
-    font-size: 16px; /* Font size for labels */
+.star {
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #ff69b4; /* Pink star */
+    position: absolute;
+    top: 20px; 
+    right: 30px; /* Position in the shapes container */
+    transform: rotate(35deg); /* Rotate for star shape */
 }
 
-/* Input and Button Styles */
-input[type="email"],
-input[type="password"],
-input[type="text"] { /* Include text input here */
-    padding: 15px; /* Padding inside the input */
-    border: 2px solid #2196f3; /* Blue border */
-    border-radius: 8px; /* Slightly more rounded corners */
-    font-size: 16px; /* Font size for inputs */
-    transition: border-color 0.3s, transform 0.2s; /* Smooth border color transition */
-    flex: 2; /* Take up remaining space */
+.triangle {
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #6f1d99; /* Purple triangle */
+    position: absolute;
+    bottom: 20px; 
+    left: 50px; /* Position in the shapes container */
 }
 
-/* Input Focus Effect */
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="text"]:focus {
-    border-color: #4caf50; /* Green border on focus */
+/* Letter Styles */
+.letter-a, .letter-b {
+    font-size: 80px; /* Large letters */
+    font-weight: bold; /* Bold letters */
+    color: #6f1d99; /* Purple color */
+    position: absolute;
+}
+
+.letter-a {
+    top: 70px; /* Position of letter A */
+    left: 20px; /* Position of letter A */
+}
+
+.letter-b {
+    bottom: 10px; /* Position of letter B */
+    right: 30px; /* Position of letter B */
+}
+
+/* Input Field Styles */
+.input-field {
+    border: 2px solid #6f1d99; /* Purple border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding for comfort */
+    font-size: 1.2em; /* Larger font size */
+}
+
+/* Change border color on focus */
+.input-field:focus {
+    border-color: #ffb733; /* Light orange on focus */
     outline: none; /* Remove default outline */
-    transform: scale(1.02); /* Slightly enlarge on focus */
 }
 
 /* Button Styles */
-button {
-    background-color: #4caf50; /* Green button */
+.signin-button {
+    width: 100%; /* Full width */
+    background-color: #6f1d99; /* Purple background */
     color: white; /* White text */
-    font-size: 18px; /* Font size */
-    padding: 12px; /* Padding */
-    border: none; /* No border */
-    border-radius: 8px; /* Slightly more rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+    font-size: 1.5em; /* Larger font size */
+    border-radius: 15px; /* Rounded corners */
+    transition: background-color 0.2s, transform 0.2s; /* Smooth transition */
 }
 
 /* Button Hover Effect */
-button:hover {
-    background-color: #388e3c; /* Darker green on hover */
-    transform: translateY(-2px); /* Lift effect on hover */
-}
-
-/* Link Styles */
-.forgot-password-link,
-.signin-link {
-    text-align: center; /* Center align */
-    margin-top: 15px; /* Space above links */
-    font-size: 14px; /* Font size for links */
-}
-
-a {
-    color: #2196f3; /* Blue links */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth color transition */
-}
-
-a:hover {
-    color: #1976d2; /* Darker blue on hover */
-    text-decoration: underline; /* Underline on hover */
+.signin-button:hover {
+    background-color: #5a0f76; /* Darker purple on hover */
+    transform: translateY(-2px); /* Slightly lift on hover */
 }
 
 /* Error Message Styles */
-.text-danger {
-    color: #f44336; /* Red for error messages */
-    text-align: center; /* Center align error messages */
-    font-weight: bold; /* Bold error messages */
-    margin-top: 10px; /* Space above error messages */
+.error-message {
+    text-align: center; /* Center align error message */
+    margin-top: 10px; /* Space above error message */
+    color: red; /* Red color for errors */
+    font-weight: bold; /* Bold error message */
+}
+
+/* Optional: Add playful background gradient */
+body {
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+/* Additional styles for cuteness */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+    font-family: 'Patrick Hand', cursive; /* Fun handwritten font for body */
 }
 
 /* Animation Keyframes */
@@ -120,4 +141,9 @@ a:hover {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Add Animation */
+.signin-container {
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
 }

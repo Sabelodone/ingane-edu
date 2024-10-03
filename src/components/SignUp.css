@@ -1,79 +1,141 @@
-/* SignUp.css */
-
 /* Container Styles */
-.container {
+.signup-container {
     background-color: #fff9e6; /* Soft off-white background */
     padding: 40px;
     border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: relative; /* For positioning shapes */
 }
 
-/* Heading Styles */
-h2 {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
-    color: #ff5722; /* Bright orange color */
-    text-align: center; /* Center align */
-    margin-bottom: 20px; /* Space below the heading */
+/* Title Styles */
+.signup-title {
+    text-align: center;
+    color: #6f1d99; /* Purple color for titles */
+    margin-bottom: 20px;
+}
+
+/* Background Shapes */
+.shape-1, .shape-2 {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+.shape-1 {
+    width: 20vw; /* Responsive width */
+    height: 20vw; /* Responsive height */
+    background: linear-gradient(90deg, #6f1d99, #fff);
+    top: -10vw; /* Responsive positioning */
+    right: -10vw; /* Responsive positioning */
+}
+
+.shape-2 {
+    width: 15vw; /* Responsive width */
+    height: 15vw; /* Responsive height */
+    background: linear-gradient(90deg, #fff, #6f1d99);
+    bottom: -10vw; /* Responsive positioning */
+    left: -10vw; /* Responsive positioning */
+}
+
+/* Heart Shape */
+.heart {
+    position: absolute;
+    top: 10%; /* Adjusted for better responsiveness */
+    left: 50%;
+    width: 15vw; /* Responsive width */
+    height: 15vw; /* Responsive height */
+    background-color: #ff5c5c; /* Red color for the heart */
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border-radius: 50px 50px 0 0; /* Rounded top */
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 15vw; /* Responsive width */
+    height: 15vw; /* Responsive height */
+    background-color: #ff5c5c; /* Red color for the heart */
+    border-radius: 50%;
+}
+
+.heart::before {
+    left: 0;
+}
+
+.heart::after {
+    left: 50%;
 }
 
 /* Form Styles */
-form {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    gap: 15px; /* Space between form fields */
+.signup-form {
+    max-width: 400px;
+    margin: 0 auto; /* Center the form */
 }
 
-/* Input and Button Styles */
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    padding: 15px; /* Padding inside the input */
-    border: 2px solid #2196f3; /* Blue border */
-    border-radius: 8px; /* Slightly more rounded corners */
-    font-size: 16px; /* Font size for inputs */
+/* Input Group Styles */
+.input-group {
+    margin-bottom: 20px; /* Space between input groups */
+}
+
+/* Input Field Styles */
+.input-field {
+    border: 1px solid #6f1d99; /* Purple border */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Checkbox Styles */
+.terms-checkbox {
+    margin-bottom: 20px; /* Space below checkbox */
 }
 
 /* Button Styles */
-button {
-    background-color: #4caf50; /* Green button */
+.signup-button {
+    width: 100%; /* Full width */
+    background-color: #6f1d99; /* Purple background */
     color: white; /* White text */
-    font-size: 18px; /* Font size */
-    padding: 12px; /* Padding */
-    border: none; /* No border */
-    border-radius: 8px; /* Slightly more rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s; /* Smooth transition */
 }
 
 /* Button Hover Effect */
-button:hover {
-    background-color: #388e3c; /* Darker green on hover */
+.signup-button:hover {
+    background-color: #5a0f76; /* Darker purple on hover */
 }
 
 /* Link Styles */
-.signin-link {
-    text-align: center; /* Center align */
-    margin-top: 15px; /* Space above links */
+.links {
+    text-align: center; /* Center align links */
 }
 
-a {
-    color: #2196f3; /* Blue links */
+.signin-link {
+    color: #6f1d99; /* Purple link color */
     text-decoration: underline; /* Underline links */
 }
 
-a:hover {
-    color: #1976d2; /* Darker blue on hover */
+.error-message {
+    text-align: center; /* Center align error message */
+    margin-top: 10px; /* Space above error message */
 }
 
-/* Error and Success Message Styles */
-.text-danger {
-    color: #f44336; /* Red for error messages */
-    text-align: center; /* Center align error messages */
+.success-message {
+    text-align: center; /* Center align success message */
+    color: #28a745; /* Green color for success */
+    margin-top: 10px; /* Space above success message */
 }
 
-.text-success {
-    color: #4caf50; /* Green for success messages */
-    text-align: center; /* Center align success messages */
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 20px; /* Reduced padding on smaller screens */
+    }
 
-  
+    .shape-1, .shape-2, .heart {
+        width: 30vw; /* Responsive width for smaller screens */
+        height: 30vw; /* Responsive height for smaller screens */
+    }
+
+    .heart {
+        width: 20vw; /* Adjusted size for heart */
+        height: 20vw; /* Adjusted size for heart */
+    }
+}
