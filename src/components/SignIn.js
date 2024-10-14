@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext'; // Import your AuthContext
 import './SignIn.css';
 import { Button, Form, Container, Row, Col } from 'react-bootstrap';
 
@@ -8,14 +9,20 @@ const SignIn = () => {
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
+    const { login } = useAuth(); // Get the login function from AuthContext
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (!email || !password) {
             setErrorMessage('Email and password are required');
-        } else {
-            setErrorMessage('');
-            // Add sign-in logic here
+            return;
+        }
+
+        try {
+            await login(email, password); // Call the login function
+            navigate('/dashboard'); // Redirect to dashboard
+        } catch (error) {
+            setErrorMessage('Login failed. Please check your credentials.');
         }
     };
 
@@ -24,9 +31,8 @@ const SignIn = () => {
             <Row className="justify-content-center">
                 <Col xs={12} md={6}>
                     <div className="signin-container">
-                        <h2 className="signin-title">Sign In</h2>
+                        <h2 className="signin-title">🌟Sign In</h2>
                         <div className="shapes-container">
-                            {/* Add shapes or alphabets here */}
                             <div className="circle shape"></div>
                             <div className="star shape"></div>
                             <div className="triangle shape"></div>
@@ -42,6 +48,7 @@ const SignIn = () => {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     className="input-field"
+                                    required
                                 />
                             </Form.Group>
                             <Form.Group controlId="formBasicPassword" className="mb-3">
@@ -52,6 +59,7 @@ const SignIn = () => {
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     className="input-field"
+                                    required
                                 />
                             </Form.Group>
                             <Form.Group controlId="formBasicCheckbox" className="mb-3">

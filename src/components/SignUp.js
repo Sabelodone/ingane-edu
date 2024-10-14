@@ -31,7 +31,7 @@ const SignUp = () => {
             <Row className="justify-content-center">
                 <Col xs={12} md={6}>
                     <div className="signup-container bg-light p-4 rounded shadow">
-                        <h2 className="signup-title text-center text-purple">Sign Up</h2>
+                        <h2 className="signup-title text-center text-purple">✨Sign Up</h2>
                         <Form className="signup-form" onSubmit={handleSubmit}>
                             <Form.Group controlId="formBasicUsername" className="mb-3">
                                 <Form.Label>Username</Form.Label>

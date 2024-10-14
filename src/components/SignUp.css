@@ -81,8 +81,10 @@
 
 /* Input Field Styles */
 .input-field {
+    background-color: #fff9e6; /* Match the background color of SignIn fields */
     border: 1px solid #6f1d99; /* Purple border */
     border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Added padding for better input appearance */
 }
 
 /* Checkbox Styles */

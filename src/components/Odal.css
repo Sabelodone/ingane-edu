@@ -1,0 +1,58 @@
+/* Modal.css */
+
+.modal {
+    z-index: 1050; /* Ensure modal is above other content */
+}
+
+.modal-dialog {
+    max-width: 600px; /* Max width for the modal */
+    margin: 1.75rem auto; /* Center the modal vertically */
+}
+
+.modal-content {
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: none; /* Remove default border */
+    background-color: #f9f9f9; /* Light background */
+}
+
+.modal-header {
+    border-bottom: 2px solid #5b5bda; /* Colorful bottom border */
+    background-color: #5b5bda; /* Header background color */
+    color: white; /* Header text color */
+    padding: 15px; /* Padding */
+    border-radius: 0.5rem 0.5rem 0 0; /* Rounded corners on the top */
+}
+
+.modal-title {
+    font-size: 1.75rem; /* Larger title */
+    font-weight: bold; /* Bold title */
+}
+
+.modal-body {
+    font-size: 1rem; /* Body text size */
+    line-height: 1.5; /* Better readability */
+    padding: 20px; /* Padding for content */
+    color: #333; /* Darker text color for readability */
+}
+
+.modal-footer {
+    border-top: none; /* Remove top border */
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    padding: 10px 20px; /* Padding */
+}
+
+.modal-footer .btn {
+    margin-left: 10px; /* Space between buttons */
+    background-color: #5b5bda; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 0.5rem; /* Rounded corners for buttons */
+    padding: 10px 20px; /* Button padding */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.modal-footer .btn:hover {
+    background-color: #4a4ac7; /* Darker shade on hover */
+}

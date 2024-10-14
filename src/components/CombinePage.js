@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './CombinePage.css'; // Ensure your CSS file is linked
 import FeatureModal from './FeatureModal'; // Import the modal component
@@ -12,10 +12,10 @@ const CombinedPage = () => {
 
   const features = [
     { id: 'short-stories', title: 'Izindatshana', description: 'Funda izindaba ezimnandi ezizokhuthaza izingane zakho.' },
-    { id: 'izintsomi', title: 'Izintsomi', description: 'Izintsomi ezikhuluma ngempilo nezingane.' },
+    { id: 'izinsomi', title: 'Izinsomi', description: 'Izinsomi ezikhuluma ngempilo nezingane.' },
     { id: 'ukuphicaphica', title: 'Ukuphicaphica', description: 'Thola ukuphicaphica okuhle nezifundo ezinzulu.' },
     { id: 'izisho', title: 'Izisho/Nezaga', description: 'Izisho ezinamandla nezaga ezizokhuthaza izingane.' },
-    { id: 'ongamisa', title: 'Ongamisa', description: 'Amathiphu nezindlela zokuphila.' },
+    { id: 'onkamisa', title: 'Onkamisa', description: 'Amathiphu nezindlela zokuphila.' },
     { id: 'imisindo', title: 'Imisindo', description: 'Izinsizakalo ezithokozisayo ezizokwenza izingane zifunde.' },
   ];
 
@@ -35,7 +35,7 @@ const CombinedPage = () => {
   const zuluafricanmama = '/zuluafricanmama.png'; // Directly use the path for images in the public directory
 
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
       {/* Navbar Section */}
       <nav className="navbar navbar-expand-lg navbar-light" style={{ background: 'linear-gradient(90deg, #ffcc00, #ff6699, #66ccff)' }}>
         <div className="container-fluid">
@@ -71,7 +71,7 @@ const CombinedPage = () => {
       <div className="landing-page">
         <header className="hero-section fade-in">
           <div className="hero-text">
-            <h2>Izindatshana, Izintsomi, Izisho/Nezaga</h2>
+            <h2>Izindatshana, Izinsomi, Izisho/Nezaga</h2>
             <p>Hlangana nokuphicaphica okujabulisayo nezingane</p>
             <Link to="/learn-more" className="btn btn-warning bounce">Funda Okuningi</Link>
           </div>
@@ -82,9 +82,9 @@ const CombinedPage = () => {
       </div>
 
       {/* Features Section */}
-      <section className="features-section">
-        <h2>Izici Zethu</h2>
-        <div className="features-cards row">
+      <section className="features-section text-center" style={{ position: 'relative', padding: '2rem 0' }}>
+        <h2 className="mb-4">Izici Zethu</h2> {/* Centered heading */}
+        <div className="features-cards row justify-content-center"> {/* Centering cards */}
           {features.map((feature) => (
             <div 
               className="feature-card col-sm-12 col-md-6 col-lg-4 zoom-in" 
@@ -102,6 +102,12 @@ const CombinedPage = () => {
               <p>{feature.description}</p>
             </div>
           ))}
+        </div>
+        {/* Decorative Shapes */}
+        <div className="shape-container">
+          <div className="shape shape1"></div>
+          <div className="shape shape2"></div>
+          <div className="shape shape3"></div>
         </div>
       </section>
 

@@ -3,12 +3,15 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import Features from './components/Features';
-import Izindatshana from './components/Izindatshana';
+import Izindatshana from './components/Izindatshana'; // Import the new Izindatshana component
 import CombinedPage from './components/CombinePage';
-import LearnMorePage from './components/LearnMorePage'; // Import the LearnMorePage component
-import { AuthProvider, useAuth } from './AuthContext';
+import LearnMorePage from './components/LearnMorePage';
+import Dashboard from './components/Dashboard';
+import { AuthProvider } from './components/AuthContext';
 import { LanguageProvider } from './LanguageContext';
 import Footer from './components/Footer';
+import ProtectedRoute from './components/ProtectedRoute';
+import './App.css';
 
 function App() {
   return (
@@ -26,9 +29,18 @@ function App() {
                 </ProtectedRoute>
               } 
             />
-            <Route path="/story" element={<Izindatshana />} />
-            <Route path="/learn-more" element={<LearnMorePage />} /> {/* Add the route here */}
+            <Route 
+              path="/izindatshana" 
+              element={
+                <ProtectedRoute>
+                  <Izindatshana />
+                </ProtectedRoute>
+              } 
+            />
+            <Route path="/learn-more" element={<LearnMorePage />} />
+            <Route path="/dashboard" element={<Dashboard />} /> {/* Dashboard route */}
             <Route path="/" element={<CombinedPage />} />
+            <Route path="*" element={<Navigate to="/signin" />} />
           </Routes>
           <Footer />
         </Router>
@@ -36,10 +48,5 @@ function App() {
     </AuthProvider>
   );
 }
-
-const ProtectedRoute = ({ children }) => {
-  const { user } = useAuth();
-  return user ? children : <Navigate to="/signin" />;
-};
 
 export default App;
