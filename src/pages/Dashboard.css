@@ -1,0 +1,170 @@
+/* Example of custom styles for Drawer */
+.MuiDrawer-paper {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    color: white;
+  }
+  
+  /* Button styles */
+  .ui-button {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+  }
+  
+  /* Theme-specific styles */
+  .theme-default {
+    --primary-color: #6200ea;
+  }
+  
+  .theme-space {
+    --primary-color: #0d47a1;
+  }
+
+.dashboard-container {
+    padding: 2rem;
+    background-color: #fff9e6; /* Light yellow background */
+    border-radius: 15px; /* Add rounded corners to the container */
+    position: relative; /* To position pseudo-elements */
+    overflow: hidden; /* Hide overflow from shapes */
+}
+
+/* Add colorful shapes with different styles */
+.dashboard-container::before,
+.dashboard-container::after {
+    content: '';
+    position: absolute;
+    border-radius: 15px; /* Rounded corners for the rectangle */
+}
+
+.dashboard-container::before {
+    width: 300px;
+    height: 300px;
+    top: -150px; /* Positioning the shape above */
+    left: -150px;
+    background-color: rgba(255, 204, 0, 0.3); /* Playful yellow */
+}
+
+.dashboard-container::after {
+    display: none;
+}
+
+/* Feature Card Styles */
+.luxury-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #ffcc00; /* Add a playful border color to the cards */
+    border-radius: 10px; /* Rounded corners for cards */
+    position: relative; /* For pseudo-elements */
+    overflow: hidden; /* To hide overflow of the shape */
+    color: black; /* Changed text color to black for better contrast */
+    padding: 1rem; /* Add padding for better text spacing */
+    background-color: #ffffff; /* White background for cards for contrast */
+}
+
+/* Hover Effect for Cards */
+.luxury-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Unique Gradients for Cards */
+.card-red {
+    background: linear-gradient(135deg, #ff5733, #ffcc00); /* Red to Yellow */
+}
+
+.card-blue {
+    background: linear-gradient(135deg, #33c3ff, #0072ff); /* Light Blue to Dark Blue */
+}
+
+.card-green {
+    background: linear-gradient(135deg, #75ff33, #33ff57); /* Green to Light Green */
+}
+
+.card-pink {
+    background: linear-gradient(135deg, #ff33b5, #ff88f1); /* Pink to Light Pink */
+}
+
+.card-yellow {
+    background: linear-gradient(135deg, #ffcc00, #ffea00); /* Yellow to Light Yellow */
+}
+
+.card-dark-pink {
+    background: linear-gradient(135deg, #c70039, #ff5e78); /* Dark Pink to Light Pink */
+}
+
+/* Optional: Add hover effects for a more dynamic feel */
+.card-red:hover,
+.card-blue:hover,
+.card-green:hover,
+.card-pink:hover,
+.card-yellow:hover,
+.card-dark-pink:hover {
+    filter: brightness(1.1); /* Lighten the card on hover */
+}
+
+/* Add playful shapes to feature cards */
+.luxury-card::before {
+    content: '';
+    position: absolute;
+    width: 60px; /* Size of the shape */
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    border-radius: 50%; /* Circle shape */
+    top: 10px; /* Position at the top */
+    left: 10px; /* Position at the left */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Gradient heart for the dashboard */
+.gradient-heart {
+    display: inline-block; /* Allow it to sit next to the text */
+    width: 30px; /* Width of the heart */
+    height: 30px; /* Height of the heart */
+    position: relative; /* Position relative to create the heart shape */
+    background: linear-gradient(135deg, #ff3e92, #ff6e3e); /* Gradient colors */
+    transform: rotate(-45deg); /* Rotate to form a heart shape */
+    margin-left: 10px; /* Space between the text and heart */
+    box-shadow: 0 0 10px rgba(255, 62, 146, 0.8), 0 0 20px rgba(255, 110, 62, 0.6); /* Glow effect */
+}
+
+.gradient-heart::before,
+.gradient-heart::after {
+    content: '';
+    width: 30px; /* Width of the heart lobes */
+    height: 30px; /* Height of the heart lobes */
+    background: inherit; /* Inherit the gradient */
+    border-radius: 50%; /* Make the lobes round */
+    position: absolute; /* Position the lobes */
+}
+
+.gradient-heart::before {
+    top: -15px; /* Position the left lobe */
+    left: 0;
+}
+
+.gradient-heart::after {
+    left: 15px; /* Position the right lobe */
+    top: 0;
+}
+
+/* Keyframes for Bounce Animation */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+    .luxury-card {
+        margin-bottom: 1rem; /* Add space between cards */
+    }
+}

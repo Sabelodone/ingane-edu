@@ -1,13 +1,15 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client'; // Import createRoot
-import App from './App';
-import { UserProvider } from './components/UserContext'; // Ensure this path is correct
+// index.js
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import { LanguageProvider } from "./LanguageContext";
+import "./index.css";
 
-const rootElement = document.getElementById('root'); // Get the root element
-const root = createRoot(rootElement); // Create a root
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 
 root.render(
-    <UserProvider>
-        <App />
-    </UserProvider>
+  <LanguageProvider>
+    <App />
+  </LanguageProvider>
 );
